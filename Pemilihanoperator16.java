@@ -1,39 +1,31 @@
-
 import java.util.Scanner;
 
-public class Pemilihanoperator16 {
+public class Pemilihanoperator16  {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        double angka1, angka2, hasil = 0;
-        char operator;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Masukkan nilai a: ");
+        int a = scanner.nextInt();
+        System.out.print("Masukkan operator (+, -, *, /): ");
+        char operator = scanner.next().charAt(0);
+        System.out.print("Masukkan nilai b: ");
+        int b = scanner.nextInt();
 
-        System.out.print("Masukkan angka 1: ");
-        angka1 = sc.nextDouble();
+        int hasil = 0;
 
-        System.out.print("Masukkan angka 2: ");
-        angka2 = sc.nextDouble();
-
-        System.out.print("Masukkan operator (+ - * /): ");
-        operator = sc.next().charAt(0);
-
-        switch (operator) {
-            case '+':
-                hasil = angka1 + angka2;
-                break;
-            case '-':
-                hasil = angka1 - angka2;
-                break;
-            case '*':
-                hasil = angka1 * angka2;
-                break;
-            case '/':
-                hasil = angka1 / angka2;
-                break;
-            default:
-                System.out.println("Operator yang dipilih tidak sesuai. Silakan memilih operator yang valid (+, -, *, /).");
-                break;
+        if (operator == '+') {
+            hasil = a + b;
+        } else if (operator == '-') {
+            hasil = a - b;
+        } else if (operator == '*') {
+            hasil = a * b;
+        } else if (operator == '/') {
+            hasil = a / b;
+        } else {
+            System.out.println("Operator yang dipilih tidak sesuai. Silakan memilih operator yang valid (+, -, *, /).");
         }
 
-        System.out.println(angka1 + " " + operator + " " + angka2 + " = " + hasil);
+        if (operator == '+' || operator == '-' || operator == '*' || operator == '/') {
+            System.out.println("Hasil " + a + " " + operator + " " + b + " = " + hasil);
+        }
     }
 }

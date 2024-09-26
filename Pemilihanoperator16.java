@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class Modifpertanyaan2 {
+public class Pemilihanoperator16 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double angka1, angka2, hasil = 0;
